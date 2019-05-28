@@ -1,2 +1,2 @@
 # JavaStudy
-My
+My Java Study record
