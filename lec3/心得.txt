@@ -1,0 +1,19 @@
+今天对java的类与对象进行了全面的学习，了解到了许多和以前使用的C++不同的地方，
+比如java中由于有package的概念，因此对类成员的访问控制机制和C++有所不同，
+java的参数传递方式也与C++存在一定的区别，而且java的类还具有功能强大的反射机制。
+而经过学习，我也了解到java是一门拥有垃圾回收机制的语言，这个机制有利有弊，需要对其进行
+深入学习才能使用好。
+最后通过对clone和equals方法的研究学习，对java引用和对象的区别有了更深的理解。
+在课后我写了一个测试程序，
+使用了继承的方式在一定程度上表示了java对象实例初始化的过程，
+以及通过重写clone和equals的方法解释了引用和对象方法的区别。
+1.继承方法，见Card.java:Line 5, CreditCard.java:Line 1, CreditCard.java:Line 7,
+在Card和CreditCard的构造函数中，通过系统打印输出，可以看到类的构造是先父类后子类的。
+2.重写方法，见CreditCard.java:Line 30, CreditCard.java:Line 38,
+重写clone和equals方法，实现浅复制和值比较。
+3.测试，见CardDemo.java
+zhang3和li4都是使用构造方法构造的，但是因为开辟的空间不同，所以使用==比较的是引用的地址，
+因此结果为false。
+而因为zhang3和li4的数据成员的值相同，所以使用equals比较结果为true。
+wang5是使用zhang3的clone方法复制得来的，并没有使用构造方法，但数据成员的值与zhang3相同，
+所以li4使用equals比较wang5的结果也为true。
